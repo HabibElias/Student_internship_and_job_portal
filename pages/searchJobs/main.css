@@ -1,0 +1,272 @@
+* {
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+}
+body {
+  background-color: #f5f5f5;
+  font-family: "Poppins", serif;
+}
+@font-face {
+  font-family: "Dm Sans";
+  src: url("../../assets/fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf");
+}
+@font-face {
+  font-family: "Dm Serif";
+  src: url("../../assets/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf");
+}
+@font-face {
+  font-family: "montserrat";
+  src: url("../../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "";
+  src: url("../../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+:root {
+  --purpleDark: #cbc9fd;
+  --purpleLight: rgba(191, 189, 255, 0.54);
+  --black: #0e181d;
+  --purple: #7d7ada;
+  --white: #ffffff;
+  --vDarkPurple: #5344c2;
+  --footer: #dddcff;
+  --btnLight: #bfbdff8a;
+  --cardStroke: #dbdfe4;
+  --inputFill: #f8f7ff;
+  --placeholder: #0e181d99;
+  --jWhite: #fcfcff;
+  --footerFill: #4f4c98;
+  --body: #f5f5f5;
+  --someWhere: #fcfcff;
+}   
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* Header Styles */
+
+header {
+  background-color: var(--purpleLight);
+}
+header nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 110px;
+  background-color: var(--purpleLight);
+  backdrop-filter: blur(10px);
+}
+
+header nav .logo {
+  color: var(--black);
+  font-family: "DM Serif";
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+header nav ul li {
+  display: inline-block;
+}
+header nav ul li a {
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 20px;
+  padding: 5px;
+  border-radius: 4px;
+  letter-spacing: 0.48px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+header nav ul li a:hover {
+  color: var(--vDarkPurple);
+  background-color: var(--inputFill);
+}
+header nav ul li a.current {
+  color: var(--vDarkPurple);
+}
+span.big {
+  font-size: 40px;
+  font-variation-settings: "FILL" 1, "opsz" 40;
+}
+header .search {
+  width: 100%;
+  padding: 2% 7%;
+  display: grid;
+  place-items: center;
+}
+header .search .slogan {
+  color: var(--black);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.72px;
+}
+
+/* Search Section input styles */
+
+.search-field {
+  display: inline-block;
+  gap: 35px;
+  margin-top: 32px;
+}
+.search-field .input {
+  display: flex;
+  gap: 35px;
+  margin-top: 4px;
+}
+.search-field .input input[type="text"] {
+  width: 537px;
+  height: 52px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  padding: 0 18px;
+  color: var(--black);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: #f8f7ff;
+  border: 3px solid #f8f7ff;
+}
+.search-field .input input[type="text"]:focus {
+  background-color: var(--someWhere);
+  border: 3px solid var(--vDarkPurple);
+  transition: background-color 0.3s ease, border 0.3s ease;
+}
+.search-field .input input[type="text"]::placeholder {
+  color: rgba(14, 24, 29, 0.6);
+}
+.search-field label {
+  color: var(--black);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 17px; /* 106.25% */
+}
+.input label {
+  color: var(--black);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 17px; /* 106.25% */
+}
+.search-field .input button {
+  padding: 15px 45px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: #7d7ada;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  transition: background-color 0.3s ease;
+}
+.search-field .input button:active {
+  transform: translate(0, 2px);
+  box-shadow: 1px 1px 4px var(--footerFill);
+}
+.search-field .input button:hover {
+  background-color: var(--vDarkPurple);
+}
+h3.filter {
+  color: #0e181d;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  margin: 25px 0;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: 0.7px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 45px;
+}
+.filters .input {
+  display: flex;
+  flex-direction: column;
+}
+.filters .input select {
+  margin-top: 4px;
+  width: 220.642px;
+  border: none;
+  border-radius: 10px;
+  background: var(--inputFill);
+  border: 3px solid var(--inputFill);
+  color: var(--black);
+  cursor: pointer;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.06px;
+  outline: none;
+  padding: 12px 13px;
+}
+.filters .input select:hover {
+  background-color: var(--someWhere);
+  border: 3px solid var(--vDarkPurple);
+  transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+/* .filters .input select::marker {
+  content: '';
+} */
+
+/* Main Page Styles */
+
+main {
+  height: 5000px;
+}
+
+/* Icon Styles */
+
+.pulse {
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    font-variation-settings: "FILL" 1, "wght" 100;
+  }
+  50% {
+    font-variation-settings: "FILL" 1, "wght" 700;
+  }
+  100% {
+    font-variation-settings: "FILL" 1, "wght" 100;
+  }
+}
