@@ -1,2 +1,2 @@
 # Student_internship_and_job_portal
-it is an web app used for studying and other educational purposes
+it is a web app for students to find internships and jobs easily. 
