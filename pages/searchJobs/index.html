@@ -4,14 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Internship Portal</title>
-    <link rel="stylesheet" href="./main.css" />
     <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     /> -->
+    <link rel="stylesheet" href="../../styles/jobHeader.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="../../styles/footer.css" />
+    <link rel="stylesheet" href="../../styles/icon.css" />
+    <link rel="stylesheet" href="./index.css" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home,logout,person,search,work"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back,arrow_forward,attach_file,call,flag,home,logout,mail,open_in_full,person,schedule,school,search,work"
     />
     <!-- <link
       rel="stylesheet"
@@ -26,14 +30,14 @@
           <li>
             <a href="#">
               <span class="material-symbols-rounded">home</span>
-              Home</a
-            >
+              <p>Home</p>
+            </a>
           </li>
           <li>
             <a href="#" class="current">
-              <span class="material-symbols-rounded pulse">work</span>
-              Search Jobs</a
-            >
+              <span class="material-symbols-rounded pulse">search</span>
+              <p>Search Jobs</p>
+            </a>
           </li>
           <li>
             <a href="#">
@@ -101,8 +105,12 @@
               <label for="dept">Department</label>
               <select name="dept" id="dept">
                 <option value="all" selected>All</option>
-                <option value="Software Engineering" selected>Software Engineering</option>
-                <option value="Mechanical Engineering" selected>Mechanical Engineering</option>
+                <option value="Software Engineering" selected>
+                  Software Engineering
+                </option>
+                <option value="Mechanical Engineering" selected>
+                  Mechanical Engineering
+                </option>
                 <option value="Applied" selected>Applied</option>
               </select>
             </div>
@@ -110,6 +118,408 @@
         </div>
       </section>
     </header>
-    <main></main>
+    <main>
+      <!-- THE SEARCH RESULT NAVIGATION -->
+      <div class="search-nav">
+        <h4>Search Result</h4>
+        <ul>
+          <li><a href="#" class="current">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">6</a></li>
+          <li><a href="#">7</a></li>
+        </ul>
+      </div>
+      <!-- THE JOBS DISPLAYED HERE -->
+      <div class="jobs">
+        <div class="job">
+          <div class="logo"></div>
+          <div class="title">
+            <h2>Junior Developer</h2>
+            <div class="keywords">
+              <p>On-site</p>
+              <p>Part-time</p>
+              <p>Entry-Level</p>
+            </div>
+          </div>
+          <div class="description">
+            <h3>Description</h3>
+            <p>
+              We are seeking a passionate Junior Developer to join our team. The
+              ideal candidate will have a strong foundation in programming and a
+              desire to learn and grow in a collaborative environment. You will
+              work on various projects, contributing to both front-end and
+              back-end development.
+            </p>
+            <button class="more">Read More</button>
+          </div>
+          <div class="details">
+            <div class="detail">
+              <div class="detailTitle">
+                <span class="material-symbols-rounded">flag</span>
+                <p>Posted</p>
+              </div>
+              <div class="detailDescription">1 day ago</div>
+            </div>
+            <div class="detail">
+              <div class="detailTitle">
+                <span class="material-symbols-rounded">work</span>
+                <p>Skills</p>
+              </div>
+              <div class="detailDescription">
+                HTML, CSS, JavaScript, +2 more
+              </div>
+            </div>
+            <div class="detail">
+              <div class="detailTitle">
+                <span class="material-symbols-rounded">schedule</span>
+                <p>Deadline</p>
+              </div>
+              <div class="detailDescription">30 Nov 2023</div>
+            </div>
+            <div class="detail">
+              <div class="detailTitle">
+                <span class="material-symbols-rounded">school</span>
+                <p>Dept</p>
+              </div>
+              <div class="detailDescription">Software Eng, Electrical Eng, Mechanical Eng, +2 more</div>
+            </div>
+          </div>
+          <div class="btns">
+            <button class="apply">
+              <span class="material-symbols-rounded"> attach_file </span>
+              Apply
+            </button>
+            <button>
+              <span class="material-symbols-rounded"> open_in_full </span>
+              See More
+            </button>
+          </div>
+        </div>
+        <div class="job">
+          <div class="logo"></div>
+          <div class="title">
+            <h2>Data Analyst</h2>
+            <div class="keywords">
+              <p>Remote</p>
+              <p>Full-time</p>
+              <p>Mid-Level</p>
+            </div>
+          </div>
+          <div class="description">
+            <h3>Description</h3>
+            <p>
+              We are looking for a skilled Data Analyst to join our team. You
+              will be responsible for analyzing large datasets to provide
+              actionable insights. The ideal candidate will have experience with
+              data visualization tools and a strong analytical mindset.
+            </p>
+            <button class="more">Read More</button>
+          </div>
+          <div class="details">
+            <div class="detail">
+              <div class="detailTitle">
+                <span class="material-symbols-rounded">flag</span>
+                <p>Posted</p>
+              </div>
+              <div class="detailDescription">3 days ago</div>
+            </div>
+            <div class="detail">
+              <div class="detailTitle">
+                <span class="material-symbols-rounded">work</span>
+                <p>Skills</p>
+              </div>
+              <div class="detailDescription">
+                SQL, Python, Data Visualization, +3 more
+              </div>
+            </div>
+            <div class="detail">
+              <div class="detailTitle">
+                <span class="material-symbols-rounded">schedule</span>
+                <p>Deadline</p>
+              </div>
+              <div class="detailDescription">15 Dec 2023</div>
+            </div>
+            <div class="detail">
+              <div class="detailTitle">
+                <span class="material-symbols-rounded">school</span>
+                <p>Dept</p>
+              </div>
+              <div class="detailDescription">Software Eng, Electrical Eng, Mechanical Eng, +2 more</div>
+            </div>
+          </div>
+          <div class="btns">
+            <button class="apply">
+              <span class="material-symbols-rounded"> attach_file </span>
+              Apply
+            </button>
+            <button>
+              <span class="material-symbols-rounded"> open_in_full </span>
+              See More
+            </button>
+          </div>
+        </div>
+        <div class="job">
+          <div class="logo"></div>
+          <div class="title">
+            <h2>Project Manager</h2>
+            <div class="keywords">
+              <p>On-site</p>
+              <p>Full-time</p>
+              <p>Senior-Level</p>
+            </div>
+          </div>
+          <div class="description">
+            <h3>Description</h3>
+            <p>
+              We are seeking an experienced Project Manager to lead our team.
+              The ideal candidate will have a proven track record of managing
+              complex projects and delivering results on time and within budget.
+              Strong leadership and communication skills are essential.
+            </p>
+            <button class="more">Read More</button>
+          </div>
+          <div class="details">
+            <div class="detail">
+              <div class="detailTitle">
+                <span class="material-symbols-rounded">flag</span>
+                <p>Posted</p>
+              </div>
+              <div class="detailDescription">1 week ago</div>
+            </div>
+            <div class="detail">
+              <div class="detailTitle">
+                <span class="material-symbols-rounded">work</span>
+                <p>Skills</p>
+              </div>
+              <div class="detailDescription">
+                Project Management, Agile, Scrum, +4 more
+              </div>
+            </div>
+            <div class="detail">
+              <div class="detailTitle">
+                <span class="material-symbols-rounded">schedule</span>
+                <p>Deadline</p>
+              </div>
+              <div class="detailDescription">20 Dec 2023</div>
+            </div>
+            <div class="detail">
+              <div class="detailTitle">
+                <span class="material-symbols-rounded">school</span>
+                <p>Dept</p>
+              </div>
+              <div class="detailDescription">Software Eng, Electrical Eng, Mechanical Eng, +2 more</div>
+            </div>
+          </div>
+          <div class="btns">
+            <button class="apply">
+              <span class="material-symbols-rounded"> attach_file </span>
+              Apply
+            </button>
+            <button>
+              <span class="material-symbols-rounded"> open_in_full </span>
+              See More
+            </button>
+          </div>
+        </div>
+        <div class="job">
+          <div class="logo"></div>
+          <div class="title">
+            <h2>UX Designer</h2>
+            <div class="keywords">
+              <p>Remote</p>
+              <p>Part-time</p>
+              <p>Mid-Level</p>
+            </div>
+          </div>
+          <div class="description">
+            <h3>Description</h3>
+            <p>
+              We are looking for a creative UX Designer to join our team. You
+              will be responsible for designing user-friendly interfaces and
+              improving the overall user experience. The ideal candidate will
+              have a strong portfolio showcasing their design skills.
+            </p>
+            <button class="more">Read More</button>
+          </div>
+          <div class="details">
+            <div class="detail">
+              <div class="detailTitle">
+                <span class="material-symbols-rounded">flag</span>
+                <p>Posted</p>
+              </div>
+              <div class="detailDescription">2 weeks ago</div>
+            </div>
+            <div class="detail">
+              <div class="detailTitle">
+                <span class="material-symbols-rounded">work</span>
+                <p>Skills</p>
+              </div>
+              <div class="detailDescription">
+                UX Design, Wireframing, Prototyping, +3 more
+              </div>
+            </div>
+            <div class="detail">
+              <div class="detailTitle">
+                <span class="material-symbols-rounded">schedule</span>
+                <p>Deadline</p>
+              </div>
+              <div class="detailDescription">25 Dec 2023</div>
+            </div>
+            <div class="detail">
+              <div class="detailTitle">
+                <span class="material-symbols-rounded">school</span>
+                <p>Dept</p>
+              </div>
+              <div class="detailDescription">Software Eng, Electrical Eng, Mechanical Eng, +2 more</div>
+            </div>
+          </div>
+          <div class="btns">
+            <button class="apply">
+              <span class="material-symbols-rounded"> attach_file </span>
+              Apply
+            </button>
+            <button>
+              <span class="material-symbols-rounded"> open_in_full </span>
+              See More
+            </button>
+          </div>
+        </div>
+        <div class="job">
+          <div class="logo"></div>
+          <div class="title">
+            <h2>Marketing Specialist</h2>
+            <div class="keywords">
+              <p>On-site</p>
+              <p>Full-time</p>
+              <p>Mid-Level</p>
+            </div>
+          </div>
+          <div class="description">
+            <h3>Description</h3>
+            <p>
+              We are seeking a talented Marketing Specialist to join our team.
+              You will be responsible for developing and executing marketing
+              strategies to promote our products and services. The ideal
+              candidate will have experience in digital marketing and a creative
+              mindset.
+            </p>
+            <button class="more">Read More</button>
+          </div>
+          <div class="details">
+            <div class="detail">
+              <div class="detailTitle">
+                <span class="material-symbols-rounded">flag</span>
+                <p>Posted</p>
+              </div>
+              <div class="detailDescription">3 weeks ago</div>
+            </div>
+            <div class="detail">
+              <div class="detailTitle">
+                <span class="material-symbols-rounded">work</span>
+                <p>Skills</p>
+              </div>
+              <div class="detailDescription">
+                Digital Marketing, SEO, Content Creation, +3 more
+              </div>
+            </div>
+            <div class="detail">
+              <div class="detailTitle">
+                <span class="material-symbols-rounded">schedule</span>
+                <p>Deadline</p>
+              </div>
+              <div class="detailDescription">31 Dec 2023</div>
+            </div>
+            <div class="detail">
+              <div class="detailTitle">
+                <span class="material-symbols-rounded">school</span>
+                <p>Dept</p>
+              </div>
+              <div class="detailDescription">Software Eng, Electrical Eng, Mechanical Eng, +2 more</div>
+            </div>
+          </div>
+          <div class="btns">
+            <button class="apply">
+              <span class="material-symbols-rounded"> attach_file </span>
+              Apply
+            </button>
+            <button>
+              <span class="material-symbols-rounded"> open_in_full </span>
+              See More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-btns">
+        <a href="#">
+          <span class="material-symbols-rounded">arrow_back</span>
+        </a>
+        <a href="#">
+          <span class="material-symbols-rounded">arrow_forward</span>
+        </a>
+      </div>
+      <!-- Footer -->
+    </main>
+    <footer>
+      <div class="copyright">
+        <p class="title">Students Job Portal</p>
+        <p class="copy">&copy; 2025</p>
+        <p class="reserved">All right reserved</p>
+      </div>
+      <div class="services">
+        <p class="title">Services</p>
+        <ul>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="resouces">
+        <p class="title">Resources</p>
+        <ul>
+          <li><a href="#">Apps</a></li>
+          <li><a href="#">Developer</a></li>
+          <li><a href="#">Integration</a></li>
+          <li><a href="#">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="contacts">
+        <p class="title">Contacts</p>
+        <ul>
+          <li>
+            <span class="material-symbols-rounded medium">mail</span>
+            studentJob.intern@gmail.com
+          </li>
+          <li>
+            <span class="material-symbols-rounded medium">call</span>
+            +(251)959784554
+          </li>
+          <li class="img-links">
+            <a href="#">
+              <img
+                src="../../assets/images/searchJobs/Frame.svg"
+                alt="facebook"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="../../assets/images/searchJobs/instagram.svg"
+                alt="facebook"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="../../assets/images/searchJobs/twitter.svg"
+                alt="facebook"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
