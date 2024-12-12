@@ -184,14 +184,15 @@ main .search-nav ul a {
   align-items: center;
   gap: 21px;
 }
-.job .btns button:hover,
-.job .btns button.apply {
+.job .btns a:hover,
+.job .btns a.apply {
   background: #7d7ada;
   color: #fff;
 }
-.job .btns button {
+.job .btns a {
   display: flex;
   align-items: center;
+  text-decoration: none;
   padding: 10.9375px 13.125px;
   border: none;
   border-radius: 16.40625px;
@@ -207,7 +208,7 @@ main .search-nav ul a {
   transition: color 0.2s ease, background-color 0.2s ease;
   transform: scale(1.2);
 }
-.job .btns button span {
+.job .btns a span {
   font-size: 9.84375px;
   font-variation-settings: "FILL" 1, "opsz" 40;
 }
