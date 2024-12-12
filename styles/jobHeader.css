@@ -52,10 +52,6 @@ header nav ul li a:hover {
 header nav ul li a.current {
   color: var(--vDarkPurple);
 }
-span.big {
-  font-size: 35px;
-  font-variation-settings: "FILL" 1, "opsz" 40;
-}
 header .search {
   width: 100%;
   padding: 2% 98px;

@@ -1,0 +1,200 @@
+body {
+  background: #dddcff;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+/* MAIN  */
+main {
+  display: flex;
+  flex-direction: column;
+}
+.choose-for {
+  display: flex;
+  justify-content: center;
+  gap: 96px;
+  margin-bottom: 60px;
+}
+.choose-for a.current {
+  padding: 4px 8px;
+  background-color: #7d7ada;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.choose-for a:hover {
+  color: #4f4c98;
+}
+.choose-for a {
+  text-decoration: none;
+  color: #0e181d;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  transition: color 0.2s ease;
+}
+.container {
+  align-self: center;
+  width: 80%;
+  background-color: #fff;
+  box-shadow: 0px 25px 48.9px rgba(14, 24, 29, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(250px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 31px 130px;
+}
+
+.container > span {
+  color: #7d7ada;
+  font-size: 44px;
+  position: absolute;
+  top: 40px;
+  left: 43px;
+}
+
+.container > h2 {
+  margin-bottom: 60px;
+  color: #0e181d;
+  text-align: center;
+  font-family: "DM Serif";
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.container > form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-evenly;
+  height: inherit;
+  text-align: center;
+}
+.container > form .inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 85px;
+}
+.container > form .input {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+}
+.container > form .input > label {
+  color: #0e181d;
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.85px;
+  margin-bottom: 6px;
+}
+.container > form .check {
+  text-align: start;
+}
+.container > form .check p {
+  color: #0e181d;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.container > form .check label {
+  color: #0e181d;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 200% */
+}
+.container > form .input input[type="file"] {
+  appearance: none;
+  background: no-repeat
+    url("../../assets/images/auth/5831eb79a609c819548d1985268ef881.png");
+  background-position: center;
+  height: 132px;
+  background-size: cover;
+}
+
+.container > form .input > select:focus,
+.container > form .input > input:focus {
+  background-color: var(--someWhere);
+  border: 2.625px solid var(--vDarkPurple);
+  transition: background-color 0.3s ease, border 0.3s ease;
+}
+.container > form .input > select,
+.container > form .input > input {
+  border-radius: 4px;
+  background: #e8e8fb;
+  width: 350px;
+  height: 45.5px;
+  border-radius: 8.75px;
+  outline: none;
+  border: none;
+  padding: 0 15.75px;
+  color: var(--black);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: #f8f7ff;
+  border: 2.625px solid #f8f7ff;
+}
+.container > form .input > input::placeholder {
+  color: rgba(14, 24, 29, 0.6);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.container > form .btns .register,
+.container > form .forget-password {
+  color: #0e181d;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.6px;
+}
+
+.container > form .btns .register > a,
+.container > form .forget-password > a {
+  color: #1a00ff;
+  font-family: "DM Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  text-decoration: none;
+}
+
+.container > form .btns > button {
+  border-radius: 10px;
+  background: #7d7ada;
+  color: #fff;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.85px;
+  width: 303px;
+  height: 59px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
