@@ -1,7 +1,7 @@
 body {
   background: #dddcff;
   overflow-x: hidden;
-  font-family: "Poppins", sans-serif;
+  font-family: "Dm Sans", sans-serif;
 }
 /* MAIN  */
 main {
@@ -61,7 +61,7 @@ main {
   margin-bottom: 60px;
   color: #0e181d;
   text-align: center;
-  font-family: "DM Serif";
+  font-family: "Dm Serif";
   font-size: 45px;
   font-style: normal;
   font-weight: 400;
@@ -161,7 +161,7 @@ main {
 .container > form .forget-password {
   color: #0e181d;
   text-align: center;
-  font-family: "DM Sans";
+  font-family: "Dm Sans";
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -172,7 +172,7 @@ main {
 .container > form .btns .register > a,
 .container > form .forget-password > a {
   color: #1a00ff;
-  font-family: "DM Sans";
+  font-family: "Dm Sans";
   font-size: 12px;
   font-style: normal;
   font-weight: 600;
@@ -186,7 +186,7 @@ main {
   background: #7d7ada;
   color: #fff;
   text-align: center;
-  font-family: "DM Sans";
+  font-family: "Dm Sans";
   font-size: 17px;
   font-style: normal;
   font-weight: 600;
