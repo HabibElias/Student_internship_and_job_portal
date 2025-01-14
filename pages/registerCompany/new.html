@@ -52,52 +52,6 @@
         <span class="material-symbols-rounded big">app_registration</span>
         <h2>Register</h2>
         <form>
-          <div class="leftform">
-            <div class="form-group">
-              <label for="company-name">Company Name</label>
-              <input
-                type="text"
-                id="company-name"
-                placeholder="Enter company name"
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="location">Location</label>
-              <input type="text" id="location" placeholder="Enter location" />
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" placeholder="example@gmail.com" />
-            </div>
-
-            <div class="form-group">
-              <label for="company-image">Company Image</label>
-              <div class="file-input">
-                <input type="file" id="company-image" />
-                <label for="company-image">Upload an image</label>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="description">Description</label>
-              <textarea
-                id="description"
-                placeholder="Describe your company"
-                rows="5"
-              ></textarea>
-            </div>
-
-            <div class="form-group consent">
-              <input type="checkbox" id="consent" />
-              <label for="consent"
-                >I agree to be part of this community and take any
-                responsibilities for my actions.</label
-              >
-            </div>
-          </div>
-
           <div class="rightform">
             <div class="form-group">
               <label for="website">Website Link</label>
@@ -122,11 +76,65 @@
               />
             </div>
           </div>
-        </form>
+          <div class="leftform">
+            <div class="form-group">
+              <label for="company-name">Company Name <big>*</big></label>
+              <input
+                type="text"
+                id="company-name"
+                placeholder="Enter company name"
+              />
+              <p class="error cNameError"></p>
+            </div>
 
-        <div class="register-btn">
-          <button type="submit">Register</button>
-        </div>
+            <div class="form-group">
+              <label for="location">Location <big>*</big></label>
+              <input type="text" id="location" placeholder="Addis Ababa, Ethiopia" pattern="[a-z][A-Z], [a-z][A-Z]" />
+              <p class="error lError"></p>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email <big>*</big></label>
+              <input type="email" id="email" placeholder="example@gmail.com" />
+              <p class="error emailError"></p>
+            </div>
+
+            <div class="form-group">
+              <label for="company-image">Company Image</label>
+              <div class="file-input">
+                <input type="file" id="company-image" />
+                <label for="company-image"></label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="description">Description <big>*</big></label>
+              <textarea
+                id="description"
+                placeholder="Describe your company"
+                rows="5"
+              ></textarea>
+              <p class="error dError"></p>
+            </div>
+
+            <div class="consent-input">
+              <div class="consent">
+                <span>
+                  <input type="checkbox" id="consent" />
+                </span>
+                <label for="consent"
+                  >I agree to be part of this community and take any
+                  responsibilities for my actions. <big>*</big></label
+                >
+              </div>
+              <p class="error consentError"></p>
+            </div>
+          </div>
+
+          <div class="register-btn">
+            <button type="submit">Register</button>
+          </div>
+        </form>
 
         <div class="footer">
           <p>
@@ -148,5 +156,6 @@
         <li><a href="#">Send Feedback</a></li>
       </ul>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>

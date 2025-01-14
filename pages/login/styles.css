@@ -69,7 +69,9 @@ main {
   background: #e8e8fb;
   padding: 9px 11px;
   border: none;
+  transition: background-color 0.2s ease-in-out;
 }
+
 .container > form .input > input::placeholder {
   color: rgba(14, 24, 29, 0.5);
   font-family: Poppins;
@@ -82,11 +84,8 @@ main {
 .container > form .forget-password {
   color: #0e181d;
   text-align: center;
-  font-family: "DM Sans";
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
   letter-spacing: 0.6px;
 }
 
@@ -118,4 +117,12 @@ main {
   border: none;
   cursor: pointer;
   margin-bottom: 12px;
+}
+
+/* VALIDATING  */
+
+p.error {
+  font-size: 12px;
+  padding: 10px 0;
+  color: hsl(0, 66%, 54%);
 }

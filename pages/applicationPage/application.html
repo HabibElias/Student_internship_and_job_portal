@@ -62,12 +62,15 @@
               placeholder="example@gmail.com"
               required
             />
+            <p class="error emailError"></p>
           </div>
           <div class="file">
             <label for="cv">Upload CV</label>
             <input type="file" name="cv" id="cv" accept=".pdf" required />
+            <label for="cv" class="file-display"></label>
+            <p class="error fileError"></p>
           </div>
-          <button type="submit">
+          <button type="submit" id="btn">
             <span class="material-symbols-rounded">assignment</span>
             <p>Apply</p>
           </button>
@@ -87,5 +90,7 @@
         <li><a href="#">Send Feedback</a></li>
       </ul>
     </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>

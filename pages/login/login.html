@@ -55,8 +55,8 @@
               name="username"
               id="username"
               placeholder="example@gmail.com"
-              required
             />
+            <p class="emailError error"></p>
           </div>
           <div class="input">
             <label for="password">Password</label>
@@ -65,8 +65,9 @@
               name="password"
               id="password"
               placeholder="password"
-              required
+              onchange="onchangePassword()"
             />
+            <p class="passwordError error"></p>
           </div>
 
           <div class="forget-password">
@@ -74,11 +75,11 @@
           </div>
 
           <div class="btns">
-            <button type="submit">Log In</button>
+            <button type="submit" class="Lgn-btn">Log In</button>
             <div class="register">
-              do not have an account?<a
+              Do not have an account?<a
                 href="../registerStudent/registerStudent.html"
-                >register here</a
+                > Register here</a
               >
             </div>
           </div>
@@ -99,5 +100,6 @@
         <li><a href="#">Send Feedback</a></li>
       </ul>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>

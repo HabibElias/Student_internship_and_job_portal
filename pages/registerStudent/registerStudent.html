@@ -57,17 +57,18 @@
         <form action="">
           <div class="inputs">
             <div class="input">
-              <label for="fName">First Name</label>
+              <label for="fName">First Name <big>*</big></label>
               <input
                 type="text"
                 name="fName"
                 id="fName"
-                placeholder="Abebe"
+                placeholder="Bekele"
                 required
               />
+              <p class="error fNameError">can't be nothing</p>
             </div>
             <div class="input">
-              <label for="lName">Last Name</label>
+              <label for="lName">Last Name <big>*</big></label>
               <input
                 type="text"
                 name="lName"
@@ -75,11 +76,12 @@
                 placeholder="Abebe"
                 required
               />
+              <p class="error lNameError">can't be nothing</p>
             </div>
           </div>
 
           <div class="input">
-            <label for="id">Id</label>
+            <label for="id">Id <big>*</big></label>
             <input
               type="text"
               name="id"
@@ -88,54 +90,69 @@
               placeholder="ETS0597/15"
               required
             />
+            <p class="error idError">can't be nothing</p>
           </div>
 
           <div class="input">
-            <label for="female">Gender</label>
+            <label for="female">Gender <big>*</big></label>
             <div class="choose">
-              <label for="female">Female</label>
-              <input
-                type="radio"
-                value="female"
-                name="gender"
-                id="female"
-                required
-              />
-              <label for="male">male</label>
-              <input
-                type="radio"
-                value="male"
-                name="gender"
-                id="male"
-                required
-              />
+              <div>
+                <input
+                  type="radio"
+                  value="female"
+                  name="gender"
+                  id="female"
+                  required
+                />
+
+                <label for="female">
+                  <p>Female</p>
+                </label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  value="male"
+                  name="gender"
+                  id="male"
+                  required
+                />
+                <label for="male">
+                  <p>Male</p>
+                </label>
+              </div>
             </div>
+            <p class="error genderError">can't be nothing</p>
           </div>
 
           <div class="inputs">
             <div class="input">
-              <label for="dept">Department</label>
+              <label for="dept">Department <big>*</big></label>
               <select name="dept" id="dept">
-                <option value="Software Eng" selected>Software Eng</option>
+                <option value="" selected></option>
+                <option value="Software Eng">Software Eng</option>
                 <option value="Mechanical Eng">Mechanical Eng</option>
                 <option value="Electrical Eng">Electrical Eng</option>
                 <option value="Mining Eng">Mining Eng</option>
               </select>
+              <p class="error dError">can't be nothing</p>
             </div>
             <div class="input">
-              <label for="yr">Year</label>
+              <label for="yr">Year <big>*</big></label>
               <select name="yr" id="yr">
-                <option value="1" selected>1st</option>
+                <option value="" selected></option>
+                <option value="1">1st</option>
                 <option value="2">2nd</option>
                 <option value="3">3rd</option>
                 <option value="4">4th</option>
                 <option value="5">5th</option>
               </select>
+              <p class="error yrError">can't be nothing</p>
             </div>
           </div>
 
           <div class="input">
-            <label for="semail">Student Email</label>
+            <label for="semail">Student Email <big>*</big></label>
             <input
               type="email"
               name="semail"
@@ -143,33 +160,37 @@
               placeholder="example@gmail.com"
               required
             />
+            <p class="error semailError">can't be nothing</p>
           </div>
 
           <div class="input">
-            <label for="semail">Student Email</label>
             <input
               type="file"
-              name="semail"
-              id="semail"
+              name="sImage"
+              id="sImage"
               accept="image/*"
               placeholder="example@gmail.com"
               required
             />
+            <label for="sImage">Student Image</label>
           </div>
 
           <div class="check">
-            <p>Consent</p>
+            <p>Consent <big>*</big></p>
             <input type="checkbox" name="consent" id="consent" required />
             <label for="consent"
               >I agree to be a part of these community and take any
               responsibilities for my actions.</label
             >
+            <p class="error consentError">can't be nothing</p>
           </div>
 
           <div class="btns">
             <button type="submit">Register</button>
             <div class="register">
-              Already have an account?<a href="../login/login.html"> Login here</a>
+              Already have an account?<a href="../login/login.html">
+                Login here</a
+              >
             </div>
           </div>
         </form>
@@ -189,5 +210,7 @@
         <li><a href="#">Send Feedback</a></li>
       </ul>
     </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>

@@ -10,19 +10,19 @@ body {
 }
 @font-face {
   font-family: "Dm Sans";
-  src: url("../../assets/fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf");
+  src: url("../assets/fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf");
 }
 @font-face {
   font-family: "Dm Serif";
-  src: url("../../assets/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf");
+  src: url("../assets/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf");
 }
 @font-face {
   font-family: "montserrat";
-  src: url("../../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+  src: url("../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
 }
 @font-face {
-  font-family: "";
-  src: url("../../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins/Poppins-Regular.ttf");
 }
 :root {
   --purpleDark: #cbc9fd;

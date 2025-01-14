@@ -142,8 +142,13 @@ main .input label {
   letter-spacing: 0.85px;
 }
 
+main .input label {
+  font-size: 16px;
+  font-family: inherit;
+  margin-bottom: 8px;
+}
 main .input input {
-  width: 333px;
+  /* width: 333px;
   height: 35px;
   border: none;
   padding: 9px 11px;
@@ -154,9 +159,27 @@ main .input input {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  background: #e8e8fb;
+  background: #e8e8fb; */
+  width: 333px;
+  padding: 10px;
+  border: 2px solid transparent;
+  outline: none;
+  border-radius: 4px;
+  background-color: #f9f9ff;
+  font-size: 14px;
+  font-family: "DM Sans", sans-serif;
+  transition: background-color 0.4s ease-in, border 0.2s ease-in;
 }
+
+main .input input:focus {
+  border-color: #7d7ada;
+  background-color: #fff;
+}
+
 main .file input[type="file"] {
+  display: none;
+}
+main .file label.file-display {
   width: 333px;
   height: 136px;
   appearance: none;
@@ -190,4 +213,15 @@ main .container form button {
 
 main .container form button:hover {
   background-color: var(--vDarkPurple);
+}
+
+p.error {
+  font-size: 12px;
+  padding: 10px 0;
+  display: none;
+  color: hsl(0, 66%, 54%);
+}
+
+#btn {
+  margin-bottom: 30px;
 }
