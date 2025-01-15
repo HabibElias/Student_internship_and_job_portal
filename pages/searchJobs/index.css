@@ -48,6 +48,24 @@ main .search-nav ul a {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 /* Jobs Styling */
+.jobs .img {
+  display: inline-flex;
+  gap: 30px;
+  align-items: center;
+  width: auto;
+}
+.jobs .img img {
+  width: 250px;
+  border-radius: 50%;
+}
+.jobs .img p {
+  font-size: 1rem;
+  color: #949393;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
 .jobs {
   width: 100%;
   height: max-content;
@@ -83,8 +101,8 @@ main .search-nav ul a {
   right: 31.71875px;
   width: 36.09375px;
   height: 39.375px;
-  background: url("../../assets/images/searchJobs/1630564284711\ 1.svg") lightgray 50% /
-    cover no-repeat;
+  background: url("../../assets/images/searchJobs/1630564284711\ 1.svg")
+    lightgray 50% / cover no-repeat;
 }
 .job .description button {
   border: none;

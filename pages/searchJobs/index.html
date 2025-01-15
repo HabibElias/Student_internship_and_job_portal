@@ -64,7 +64,7 @@
                 name="search"
                 id="search"
               />
-              <button>
+              <button class="search-btn">
                 <span class="material-symbols-rounded">search</span>
                 Search
               </button>
@@ -85,33 +85,48 @@
               <select name="jobTime" id="jobTime">
                 <option value="all" selected>All</option>
                 <option value="partTime">Part-time</option>
-                <option value="internship">Full-time</option>
+                <option value="fullTime">Full-time</option>
               </select>
             </div>
             <div class="input">
               <label for="pTime">Posted Time</label>
               <select name="pTime" id="pTime">
-                <option value="" selected>All</option>
-                <option value="recent">Recent</option>
-                <option value="2hr">2hr ago</option>
-                <option value="day">a day ago</option>
-                <option value="week">a week ago</option>
-                <option value="month">a month ago</option>
-                <option value="6month">6 month ago</option>
-                <option value="year">a year ago</option>
+                <option value="all" selected>All</option>
+                <option value="1">Recent</option>
+                <option value="1">before 1 day</option>
+                <option value="7">before a week</option>
+                <option value="30">before a month</option>
+                <option value="365">before a year</option>
               </select>
             </div>
             <div class="input">
               <label for="dept">Department</label>
               <select name="dept" id="dept">
                 <option value="all" selected>All</option>
-                <option value="Software Engineering" selected>
+                <option value="Software Engineering">
                   Software Engineering
                 </option>
-                <option value="Mechanical Engineering" selected>
+                <option value="Mechanical Engineering">
                   Mechanical Engineering
                 </option>
-                <option value="Applied" selected>Applied</option>
+                <option value="Food Science and Applied">
+                  Food Science and Applied
+                </option>
+                <option value="Geology">Geology</option>
+                <option value="Industrial Chemistry">
+                  Industrial Chemistry
+                </option>
+                <option value="Environmental Engineering">
+                  Environmental Engineering
+                </option>
+                <option value="Mining Engineering">Mining Engineering</option>
+                <option value="Electromechanical Engineering">
+                  Electromechanical Engineering
+                </option>
+                <option value="Chemical Engineering">
+                  Chemical Engineering
+                </option>
+                <option value="Civil Engineering">Civil Engineering</option>
               </select>
             </div>
           </div>
@@ -133,335 +148,7 @@
         </ul>
       </div>
       <!-- THE JOBS DISPLAYED HERE -->
-      <div class="jobs">
-        <div class="job">
-          <div class="logo"></div>
-          <div class="title">
-            <h2>Junior Developer</h2>
-            <div class="keywords">
-              <p>On-site</p>
-              <p>Part-time</p>
-              <p>Entry-Level</p>
-            </div>
-          </div>
-          <div class="description">
-            <h3>Description</h3>
-            <p>
-              We are seeking a passionate Junior Developer to join our team. The
-              ideal candidate will have a strong foundation in programming and a
-              desire to learn and grow in a collaborative environment. You will
-              work on various projects, contributing to both front-end and
-              back-end development.
-            </p>
-            <button class="more">Read More</button>
-          </div>
-          <div class="details">
-            <div class="detail">
-              <div class="detailTitle">
-                <span class="material-symbols-rounded">flag</span>
-                <p>Posted</p>
-              </div>
-              <div class="detailDescription">1 day ago</div>
-            </div>
-            <div class="detail">
-              <div class="detailTitle">
-                <span class="material-symbols-rounded">work</span>
-                <p>Skills</p>
-              </div>
-              <div class="detailDescription">
-                HTML, CSS, JavaScript, +2 more
-              </div>
-            </div>
-            <div class="detail">
-              <div class="detailTitle">
-                <span class="material-symbols-rounded">schedule</span>
-                <p>Deadline</p>
-              </div>
-              <div class="detailDescription">30 Nov 2023</div>
-            </div>
-            <div class="detail">
-              <div class="detailTitle">
-                <span class="material-symbols-rounded">school</span>
-                <p>Dept</p>
-              </div>
-              <div class="detailDescription">
-                Software Eng, Electrical Eng, Mechanical Eng, +2 more
-              </div>
-            </div>
-          </div>
-          <div class="btns">
-            <a href="../applicationPage/application.html" class="apply">
-              <span class="material-symbols-rounded"> attach_file </span>
-              Apply
-            </a>
-            <a href="../jobPage/job.html">
-              <span class="material-symbols-rounded"> open_in_full </span>
-              See More
-            </a>
-          </div>
-        </div>
-        <div class="job">
-          <div class="logo"></div>
-          <div class="title">
-            <h2>Data Analyst</h2>
-            <div class="keywords">
-              <p>Remote</p>
-              <p>Full-time</p>
-              <p>Mid-Level</p>
-            </div>
-          </div>
-          <div class="description">
-            <h3>Description</h3>
-            <p>
-              We are looking for a skilled Data Analyst to join our team. You
-              will be responsible for analyzing large datasets to provide
-              actionable insights. The ideal candidate will have experience with
-              data visualization tools and a strong analytical mindset.
-            </p>
-            <button class="more">Read More</button>
-          </div>
-          <div class="details">
-            <div class="detail">
-              <div class="detailTitle">
-                <span class="material-symbols-rounded">flag</span>
-                <p>Posted</p>
-              </div>
-              <div class="detailDescription">3 days ago</div>
-            </div>
-            <div class="detail">
-              <div class="detailTitle">
-                <span class="material-symbols-rounded">work</span>
-                <p>Skills</p>
-              </div>
-              <div class="detailDescription">
-                SQL, Python, Data Visualization, +3 more
-              </div>
-            </div>
-            <div class="detail">
-              <div class="detailTitle">
-                <span class="material-symbols-rounded">schedule</span>
-                <p>Deadline</p>
-              </div>
-              <div class="detailDescription">15 Dec 2023</div>
-            </div>
-            <div class="detail">
-              <div class="detailTitle">
-                <span class="material-symbols-rounded">school</span>
-                <p>Dept</p>
-              </div>
-              <div class="detailDescription">
-                Software Eng, Electrical Eng, Mechanical Eng, +2 more
-              </div>
-            </div>
-          </div>
-          <div class="btns">
-            <a href="../applicationPage/application.html" class="apply">
-              <span class="material-symbols-rounded"> attach_file </span>
-              Apply
-            </a>
-            <a href="../jobPage/job.html">
-              <span class="material-symbols-rounded"> open_in_full </span>
-              See More
-            </a>
-          </div>
-        </div>
-        <div class="job">
-          <div class="logo"></div>
-          <div class="title">
-            <h2>Project Manager</h2>
-            <div class="keywords">
-              <p>On-site</p>
-              <p>Full-time</p>
-              <p>Senior-Level</p>
-            </div>
-          </div>
-          <div class="description">
-            <h3>Description</h3>
-            <p>
-              We are seeking an experienced Project Manager to lead our team.
-              The ideal candidate will have a proven track record of managing
-              complex projects and delivering results on time and within budget.
-              Strong leadership and communication skills are essential.
-            </p>
-            <button class="more">Read More</button>
-          </div>
-          <div class="details">
-            <div class="detail">
-              <div class="detailTitle">
-                <span class="material-symbols-rounded">flag</span>
-                <p>Posted</p>
-              </div>
-              <div class="detailDescription">1 week ago</div>
-            </div>
-            <div class="detail">
-              <div class="detailTitle">
-                <span class="material-symbols-rounded">work</span>
-                <p>Skills</p>
-              </div>
-              <div class="detailDescription">
-                Project Management, Agile, Scrum, +4 more
-              </div>
-            </div>
-            <div class="detail">
-              <div class="detailTitle">
-                <span class="material-symbols-rounded">schedule</span>
-                <p>Deadline</p>
-              </div>
-              <div class="detailDescription">20 Dec 2023</div>
-            </div>
-            <div class="detail">
-              <div class="detailTitle">
-                <span class="material-symbols-rounded">school</span>
-                <p>Dept</p>
-              </div>
-              <div class="detailDescription">
-                Software Eng, Electrical Eng, Mechanical Eng, +2 more
-              </div>
-            </div>
-          </div>
-          <div class="btns">
-            <a href="../applicationPage/application.html" class="apply">
-              <span class="material-symbols-rounded"> attach_file </span>
-              Apply
-            </a>
-            <a href="../jobPage/job.html">
-              <span class="material-symbols-rounded"> open_in_full </span>
-              See More
-            </a>
-          </div>
-        </div>
-        <div class="job">
-          <div class="logo"></div>
-          <div class="title">
-            <h2>UX Designer</h2>
-            <div class="keywords">
-              <p>Remote</p>
-              <p>Part-time</p>
-              <p>Mid-Level</p>
-            </div>
-          </div>
-          <div class="description">
-            <h3>Description</h3>
-            <p>
-              We are looking for a creative UX Designer to join our team. You
-              will be responsible for designing user-friendly interfaces and
-              improving the overall user experience. The ideal candidate will
-              have a strong portfolio showcasing their design skills.
-            </p>
-            <button class="more">Read More</button>
-          </div>
-          <div class="details">
-            <div class="detail">
-              <div class="detailTitle">
-                <span class="material-symbols-rounded">flag</span>
-                <p>Posted</p>
-              </div>
-              <div class="detailDescription">2 weeks ago</div>
-            </div>
-            <div class="detail">
-              <div class="detailTitle">
-                <span class="material-symbols-rounded">work</span>
-                <p>Skills</p>
-              </div>
-              <div class="detailDescription">
-                UX Design, Wireframing, Prototyping, +3 more
-              </div>
-            </div>
-            <div class="detail">
-              <div class="detailTitle">
-                <span class="material-symbols-rounded">schedule</span>
-                <p>Deadline</p>
-              </div>
-              <div class="detailDescription">25 Dec 2023</div>
-            </div>
-            <div class="detail">
-              <div class="detailTitle">
-                <span class="material-symbols-rounded">school</span>
-                <p>Dept</p>
-              </div>
-              <div class="detailDescription">
-                Software Eng, Electrical Eng, Mechanical Eng, +2 more
-              </div>
-            </div>
-          </div>
-          <div class="btns">
-            <a href="../applicationPage/application.html" class="apply">
-              <span class="material-symbols-rounded"> attach_file </span>
-              Apply
-            </a>
-            <a href="../jobPage/job.html">
-              <span class="material-symbols-rounded"> open_in_full </span>
-              See More
-            </a>
-          </div>
-        </div>
-        <div class="job">
-          <div class="logo"></div>
-          <div class="title">
-            <h2>Marketing Specialist</h2>
-            <div class="keywords">
-              <p>On-site</p>
-              <p>Full-time</p>
-              <p>Mid-Level</p>
-            </div>
-          </div>
-          <div class="description">
-            <h3>Description</h3>
-            <p>
-              We are seeking a talented Marketing Specialist to join our team.
-              You will be responsible for developing and executing marketing
-              strategies to promote our products and services. The ideal
-              candidate will have experience in digital marketing and a creative
-              mindset.
-            </p>
-            <button class="more">Read More</button>
-          </div>
-          <div class="details">
-            <div class="detail">
-              <div class="detailTitle">
-                <span class="material-symbols-rounded">flag</span>
-                <p>Posted</p>
-              </div>
-              <div class="detailDescription">3 weeks ago</div>
-            </div>
-            <div class="detail">
-              <div class="detailTitle">
-                <span class="material-symbols-rounded">work</span>
-                <p>Skills</p>
-              </div>
-              <div class="detailDescription">
-                Digital Marketing, SEO, Content Creation, +3 more
-              </div>
-            </div>
-            <div class="detail">
-              <div class="detailTitle">
-                <span class="material-symbols-rounded">schedule</span>
-                <p>Deadline</p>
-              </div>
-              <div class="detailDescription">31 Dec 2023</div>
-            </div>
-            <div class="detail">
-              <div class="detailTitle">
-                <span class="material-symbols-rounded">school</span>
-                <p>Dept</p>
-              </div>
-              <div class="detailDescription">
-                Software Eng, Electrical Eng, Mechanical Eng, +2 more
-              </div>
-            </div>
-          </div>
-          <div class="btns">
-            <a href="../applicationPage/application.html" class="apply">
-              <span class="material-symbols-rounded"> attach_file </span>
-              Apply
-            </a>
-            <a href="../jobPage/job.html">
-              <span class="material-symbols-rounded"> open_in_full </span>
-              See More
-            </a>
-          </div>
-        </div>
-      </div>
+      <div class="jobs"></div>
 
       <div class="bottom-btns">
         <a href="#">
@@ -531,5 +218,7 @@
         </ul>
       </div>
     </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>
