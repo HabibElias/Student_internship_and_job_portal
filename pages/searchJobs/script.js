@@ -298,7 +298,11 @@ function createJobElement(job) {
         <span class="material-symbols-rounded">school</span>
         <p>Dept</p>
         </div>
-        <div class="detailDescription">${job.dept.join(", ")}</div>
+        <div class="detailDescription">${
+          job.dept.join(", ").length <= 41
+            ? job.dept.join(", ")
+            : job.dept.join(", ").slice(0, 41) + "..."
+        }</div>
             </div>
         </div>
         <div class="btns">
@@ -319,6 +323,5 @@ function createJobElement(job) {
 jobs.forEach((e) => {
   jobsElement.appendChild(createJobElement(e));
 });
-
 
 searchBtn.addEventListener("click", filter);
