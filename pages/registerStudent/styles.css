@@ -100,16 +100,13 @@ main {
   color: #0e181d;
   font-family: Poppins;
   font-size: 16px;
-  font-style: normal;
   font-weight: 600;
-  line-height: normal;
 }
 .container > form .check label {
   color: #0e181d;
   font-family: Poppins;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
   line-height: 24px; /* 200% */
 }
 .container > form .input input[type="file"] {
@@ -274,4 +271,7 @@ select {
   margin-top: 3.5px;
   outline: none;
   padding: 10.5px 11.375px;
+}
+footer {
+  padding: 20px 0;
 }

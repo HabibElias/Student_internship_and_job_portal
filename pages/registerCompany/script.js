@@ -4,6 +4,7 @@ const locations = document.getElementById("location");
 const email = document.getElementById("email");
 const description = document.getElementById("description");
 const consent = document.getElementById("consent");
+const file = document.querySelector("#company-image");
 
 // all the variables for the error displays
 const emailError = document.querySelector(".emailError");
@@ -11,6 +12,7 @@ const locationError = document.querySelector(".lError");
 const cNameError = document.querySelector(".cNameError");
 const dError = document.querySelector(".dError");
 const consentError = document.querySelector(".consentError");
+const fileError = document.querySelector(".fileError");
 
 // the btn
 const button = document.querySelector(".register-btn button");
@@ -28,7 +30,7 @@ const validName = () => {
       companyName.style.border = "";
       cNameError.style.display = "none";
       companyName.style.backgroundColor = backgroundColor;
-    }, 4000);
+    }, 10000);
     return false;
   }
   cNameError.textContent = "";
@@ -49,7 +51,7 @@ const validLocation = () => {
       locations.style.border = "";
       locationError.style.display = "none";
       locations.style.backgroundColor = backgroundColor;
-    }, 4000);
+    }, 10000);
     return false;
   }
   locationError.textContent = "";
@@ -58,6 +60,32 @@ const validLocation = () => {
   locations.style.backgroundColor = backgroundColor;
   return true;
 };
+
+const updateImage = () => {
+  // Update the file name display when a file is selected
+  const fileName =
+    file.files.length > 0
+      ? "File selected: " + file.files[0].name
+      : "No file chosen";
+  fileError.textContent = fileName;
+  if (!(fileError.textContent == "No file chosen")) {
+    fileError.style.color = "#000";
+  }
+  console.log(fileName);
+  fileError.style.display = "block";
+};
+
+const validateImage = () => {
+  if (file.files.length === 0) {
+    fileError.textContent = "Please select a file.";
+    fileError.style.display = "block";
+    fileError.style.color = "hsl(0, 66%, 54%)";
+    return false;
+  }
+  return true;
+};
+
+file.addEventListener("change", updateImage);
 
 const validEmail = () => {
   if (!email.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
@@ -70,7 +98,7 @@ const validEmail = () => {
       email.style.border = "";
       emailError.style.display = "none";
       email.style.backgroundColor = backgroundColor;
-    }, 4000);
+    }, 10000);
     return false;
   } else {
     emailError.textContent = "";
@@ -82,9 +110,16 @@ const validEmail = () => {
 };
 
 const validDescription = () => {
-  if (description.value.length < 80 || description.value.length > 320) {
+  if (
+    description.value.length == 0 ||
+    description.value.length < 80 ||
+    description.value.length > 320
+  ) {
     dError.style.display = "block";
-    dError.textContent = "Description must be (80 - 320) characters";
+    dError.textContent =
+      description.value.length == 0
+        ? "Please enter your company description"
+        : "Description must be (80 - 320) characters";
     description.style.border = "2px solid  hsl(0, 66%, 54%)";
     description.style.backgroundColor = "hsla(0, 66.00%, 53.90%, 0.24)";
     setTimeout(() => {
@@ -92,7 +127,7 @@ const validDescription = () => {
       description.style.border = "";
       dError.style.display = "none";
       description.style.backgroundColor = backgroundColor;
-    }, 4000);
+    }, 10000);
     return false;
   }
   dError.textContent = "";
@@ -110,14 +145,13 @@ const validConsent = () => {
     setTimeout(() => {
       consentError.textContent = "";
       consentError.style.display = "none";
-    }, 4000);
+    }, 10000);
     return false;
   }
   consentError.textContent = "";
   consentError.style.display = "none";
   return true;
 };
-
 
 button.addEventListener("click", (e) => {
   e.preventDefault();
@@ -126,8 +160,9 @@ button.addEventListener("click", (e) => {
   const description = validDescription();
   const consent = validConsent();
   const location = validLocation();
+  const file = validateImage();
 
-  if (email && name && description && consent && location) {
+  if (email && name && description && consent && location && file) {
     window.location.replace("../searchJobs/index.html");
   }
 });

@@ -7,6 +7,7 @@ const dept = document.getElementById("dept");
 const year = document.getElementById("yr");
 const studentEmail = document.getElementById("semail");
 const consent = document.getElementById("consent");
+const file = document.getElementById("sImage");
 
 // all the error displays
 const fNameError = document.querySelector(".fNameError");
@@ -17,6 +18,7 @@ const deptError = document.querySelector(".dError");
 const yearError = document.querySelector(".yrError");
 const studentEmailError = document.querySelector(".semailError");
 const consentError = document.querySelector(".consentError");
+const fileError = document.querySelector(".fileError");
 
 // the button
 const button = document.querySelector(".btns button");
@@ -35,7 +37,7 @@ const validateFName = () => {
       fName.style.border = "";
       fNameError.style.display = "none";
       fName.style.backgroundColor = backgroundColor;
-    }, 4000);
+    }, 10000);
     return false;
   }
   fNameError.textContent = "";
@@ -55,7 +57,7 @@ const validateLName = () => {
       lName.style.border = "";
       lNameError.style.display = "none";
       lName.style.backgroundColor = backgroundColor;
-    }, 4000);
+    }, 10000);
     return false;
   }
   lNameError.textContent = "";
@@ -76,7 +78,7 @@ const validateId = () => {
       id.style.border = "";
       idError.style.display = "none";
       id.style.backgroundColor = backgroundColor;
-    }, 4000);
+    }, 10000);
     return false;
   } else if (!regex.test(id.value)) {
     idError.style.display = "block";
@@ -88,7 +90,7 @@ const validateId = () => {
       id.style.border = "";
       idError.style.display = "none";
       id.style.backgroundColor = backgroundColor;
-    }, 4000);
+    }, 10000);
     return false;
   } else {
     idError.textContent = "";
@@ -107,7 +109,7 @@ const validateGender = () => {
     setTimeout(() => {
       genderError.textContent = "";
       genderError.style.display = "none";
-    }, 4000);
+    }, 10000);
     return false;
   }
   genderError.textContent = "";
@@ -125,7 +127,7 @@ const validateDept = () => {
       dept.style.border = "";
       deptError.style.display = "none";
       dept.style.backgroundColor = backgroundColor;
-    }, 4000);
+    }, 10000);
     return false;
   }
   deptError.textContent = "";
@@ -148,7 +150,7 @@ const validateSEmail = () => {
       studentEmail.style.border = "";
       studentEmailError.style.display = "none";
       studentEmail.style.backgroundColor = backgroundColor;
-    }, 4000);
+    }, 10000);
     return false;
   } else {
     studentEmailError.textContent = "";
@@ -170,7 +172,7 @@ const validateYear = () => {
       year.style.border = "";
       yearError.style.display = "none";
       year.style.backgroundColor = backgroundColor;
-    }, 4000);
+    }, 10000);
     return false;
   }
   yearError.textContent = "";
@@ -191,7 +193,7 @@ const validateConsent = () => {
       consent.style.border = "";
       consentError.style.display = "none";
       consent.style.backgroundColor = backgroundColor;
-    }, 4000);
+    }, 10000);
     return false;
   }
   consentError.textContent = "";
@@ -201,6 +203,31 @@ const validateConsent = () => {
   return true;
 };
 
+const updateFile = () => {
+  // Update the file name display when a file is selected
+  const fileName =
+    file.files.length > 0
+      ? "File selected: " + file.files[0].name
+      : "No file chosen";
+  fileError.textContent = fileName;
+  if (!(fileError.textContent == "No file chosen")) {
+    fileError.style.color = "#000";
+  }
+  console.log(fileName);
+  fileError.style.display = "block";
+};
+
+const validateFile = () => {
+  if (file.files.length === 0) {
+    fileError.textContent = "Please select a file.";
+    fileError.style.display = "block";
+    fileError.style.color = "hsl(0, 66%, 54%)";
+    return false;
+  }
+  return true;
+};
+
+file.addEventListener("change", updateFile);
 button.addEventListener("click", (e) => {
   e.preventDefault();
   const fName = validateFName();
@@ -211,8 +238,19 @@ button.addEventListener("click", (e) => {
   const semail = validateSEmail();
   const year = validateYear();
   const consent = validateConsent();
+  const file = validateFile();
 
-  if (fName && lName && id && gender && dept && semail && year && consent) {
+  if (
+    fName &&
+    lName &&
+    id &&
+    gender &&
+    dept &&
+    semail &&
+    file &&
+    year &&
+    consent
+  ) {
     window.location.replace("../searchJobs/index.html");
   }
 });

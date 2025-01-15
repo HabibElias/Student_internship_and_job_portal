@@ -14,7 +14,7 @@ const validateUsername = () => {
       emailError.textContent = "";
       userName.style.border = "";
       userName.style.backgroundColor = "#e8e8fb";
-    }, 4000);
+    }, 10000);
     return false;
   } else {
     emailError.textContent = "";
@@ -26,15 +26,15 @@ const validateUsername = () => {
 
 // validating the password
 const validatePassword = () => {
-  if (password.value.length < 8) {
-    passwordError.textContent = "password must be more than 8 characters";
+  if (password.value.length == 0 || password.value.length < 8) {
+    passwordError.textContent = password.value.length == 0 ? "Please enter a password" : "password must be more than 8 characters";
     password.style.border = "2px solid hsl(0, 66%, 54%)";
     password.style.backgroundColor = "hsla(0, 66.00%, 53.90%, 0.24)";
     setTimeout(() => {
       password.style.border = "";
       passwordError.textContent = "";
       password.style.backgroundColor = "#e8e8fb";
-    }, 4000);
+    }, 10000);
     return false;
   } else {
     password.style.border = "";
@@ -53,7 +53,7 @@ const onchangePassword = () => {
       password.style.border = "";
       passwordError.textContent = "";
       password.style.backgroundColor = "#e8e8fb";
-    }, 4000);
+    }, 10000);
   } else {
     password.style.border = "";
     passwordError.textContent = "";
@@ -61,7 +61,7 @@ const onchangePassword = () => {
   }
 };
 
-button.addEventListener("click", (e) => {
+const validate = (e) => {
   e.preventDefault();
   const email = validateUsername();
   const password = validatePassword();
@@ -69,4 +69,6 @@ button.addEventListener("click", (e) => {
   if (email && password) {
     window.location.replace("../searchJobs/index.html");
   }
-});
+};
+
+button.addEventListener("click", (e) => validate(e));
